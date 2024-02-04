@@ -1,0 +1,12 @@
+history (list all the commands executed by user)
+free 
+free -m     (shows in mb)
+cat /proc/meminfo   (display memory information)      
+cat /proc/cpuinfo   (display cpu information)
+uname -a        (show kernel information)
+du              (shows directory space utilization)
+du -m /etc      (shows files disk usage in etc folder)
+
+whereis ls 
+df      (how many file systems are there)
+df -m   (shows in kbs)

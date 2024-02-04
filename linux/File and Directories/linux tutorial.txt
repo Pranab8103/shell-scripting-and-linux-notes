@@ -1,0 +1,94 @@
+#run docker nginx container 
+> docker run -d --name myubuntu -p 8080:80 ubuntu tail -f /dev/null
+
+> docker run -d --name myubuntu -p 8080:80 -v ubuntu-volume:/folder1/ ubuntu tail -f /dev/null
+
+> docker container exec -it myubuntu 
+
+> mkdir folder1
+
+> apt-get update 
+> apt-get install vim 
+> apt-get install nano -y
+> apt-get install tree
+
+linux filesystem heirarchy
+--------------------------
+/ - This is top level directory 
+    It is parent directory for all other directories(C in windows)
+    It is called as ROOT directory 
+    It is represented by forward slash(/)
+    c:\ of windows 
+
+/root - It is home directory for root user(super user)
+        It provides working environment for root user 
+        C:\ Documents and Settings\Administrator 
+
+/home - It is home directory for other users 
+        It provide working rnvironment for other users(other than root)
+        C:\Documents and Settings\username 
+
+/usr - by default softwares are installed in /usr directory 
+        (UNIX Shareable resources)
+        C:\programs files 
+
+/bin - it contains commands used by all users 
+        (Binary files)
+
+/sbin - it contains commands used by only super users(Root)
+        (Super user's binary files)
+
+/var - it is containing variable data like mails, log files
+
+Commands
+--------
+date
+cal #calendar
+uptime (uptime of system)
+whoami     (who u are logged in as)
+finger  (display information about user)
+users/id    show user information 
+man command     shows maual of command 
+username    shows your user name 
+who/w   (displays who is online)
+ls 
+ls -l   (displays in alphabetical order, long list with permissions)
+ls -ltr     (see which file got recently updated)
+ls -la      (display hidden files)
+pwd
+cat     (displays a file)
+less    (display file page by page)
+more    
+head    (displays first 10 lines)
+tail    (displays last 10 lines)
+page    
+
+*********
+tree
+*********
+
+touch   (create a 0 bit file)
+- touch file1 file2 file3 ...
+
+cat > filename  (create file and allow to write)
+- cat > file1     (warning!!! it will overwrite existing data)
+- cat >> file1      (ADD content to existing file)
+
+nano        (create a file if filename doesn't exist)
+vi          (create a file if filename doesn't exist)
+
+mkdir dir1 dir2 dir3...
+
+rm file1.txt 
+rm file2 file3 
+rm -f file6.txt
+rm file4 file5 -f   (-f force)
+
+rmdir folder1   (it will work only on empty directory)
+rmdir dir1 dir2 dir3 
+rm -f -r dir1       (recursively force delete everything in dir1)
+rm -rf
+
+**************
+rm -rf *        (delete everything in current directory)
+**************

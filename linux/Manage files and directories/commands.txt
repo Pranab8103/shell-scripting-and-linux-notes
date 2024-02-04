@@ -1,0 +1,43 @@
+touch file1 file2
+cp file1 file2      (copy source to destination)
+cp file1 dir1 
+
+cat dir1/file1 
+
+cp -R dir1 dir2        (copy content from dir1 to dir2 recursively)
+
+mv file1 dir2       (move file1 to dir2)
+mv file1 file3      (rename from file1 to file3)
+
+find  / -options filename   (options: -name, -user, -group)
+-name: for searching a file with its name 
+-user: For files whose owner is a particular user 
+-group: for files belonging to particular group 
+
+- find / -name file1
+
+diff file1 file2    (compare content of file1 and file2)
+
+file file1      (find what kind of file is this)
+
+*****************
+- grep hello file1          #find hello in file1
+- grep Permit /etc/ssh/sshd_config      #check if PermitRootLogin is yes or no in sshd_config
+- grep Permit -i /etc/ssh/sshd_config   (ignore case)
+- grep ^t file1     #search for all lines which start with t 
+
+- ls -l | grep environment      (ls -l will output as a file and grep will take from it. grep cannot directly
+                                search directory)
+- ls -l | grep ^d       (get only those file which have d at the beginning)
+
+******************
+sed command( stream editor is used to search a word in the file and replace it with the word required to 
+be in the output)
+
+Note : it will only modify the output, but there will be no change in the original file 
+
+eg: 
+    sed 's/old_text/new_text/' file_name        #Hi with Hello 
+    sed 's/old_text/new_text/g' file_name       # here if it finds Hi with other word then also it will change it
+    sed -i 's/old_text/new_text/' file_name     #this command will update in file also. above 2 will only display in std output
+    

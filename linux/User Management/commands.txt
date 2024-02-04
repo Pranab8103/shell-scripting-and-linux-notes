@@ -1,0 +1,73 @@
+super orroot user: user is the most powerful user. He is the administrator user  
+system user: users created by the softwares or applications
+normal users: normal users are the users created by root user
+
+User creation 
+-------------
+Whenever a user is created in linux, below things happen by default 
+    - a home directory is created (/home/username)
+    - unique UID & GID are given to user 
+    - An entry in /etc/passwd 
+
+useradd <option> <username>
+
+Options are:
+------------
+    -u user id 
+    -G Secondary group id 
+    -g primary group id 
+    -d home directory 
+    -c comment 
+    -s shell  
+
+File Permissions 
+----------------
+Permissions are applied at 3 levels:
+    * Owner or user level 
+    * Group level 
+    * Other level 
+
+Permissions are applied in 3 ways:
+    * r - Read only 
+    * w - write/edit/append/delete 
+    * x - Execute/Run 
+
+-rwxrw-r-- = - file | d (directory) | b block file(harddisk, floppy disk) | c character file(keyboard, mouse) | l link files 
+           = rwx(owner permissions) = owner has all read write execute permissions(- in case if null)
+           = rw- (group permissions) = users who will be in root group will get read and write but not execute 
+           = r-- (others permissions)
+
+File permissions 
+----------------
+Access modes are different on file and directory 
+
+permission 
+----------
+    file                                    dir
+r - open the file                       ls the contents of dir 
+w - write, edit, append, delete file    Add/Del/Rename contents of dir 
+x - To run a command/shell scripts      To enter into dir using 'cd'
+
+permission can be set on any file/dir by using 2 methods: 
+* symbolic methods(ugo)  
+* absolute method (numbers) 
+
+symbolic method                                     absolute method 
+---------------                                     ---------------
+#chmod [who] [+/-/=] [permissions] file             we use numbers instead of using symbols 
+who: to whom the permissions to be assigned         Read - 4 
+permissions: users/owner(u):group(g);others(o)      Write - 2 
+example:                                            Execute - 1 
+    #chmod u=rwx, g=rw,o=r <file_name>              chmod 764 <file_name>
+    #chmod ugo=rwx <file_name>                      chmod 777 <file_name>
+
+chmod u+x, g-w,o=w file1 
+chmod 755 file1 
+
+give permission to a specific user 
+----------------------------------
+chmod 710 /home/pranab
+
+chown
+-----
+chown john:john file1

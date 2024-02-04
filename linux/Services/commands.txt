@@ -1,0 +1,27 @@
+service - This controls the starting and stopping of services 
+chkconfig - This controls which services are set to start on boot 
+
+service status -- to cheeck the status of the service 
+service start -- to start the service 
+service stop -- to stop the service 
+service reload -- to reload the service 
+service restart -- to restart the service 
+
+chkconfig --list - to check the availability of service 
+chkconfig <service> on - to make service available after restart 
+chkconfig <service> off - to make the service unavailable after restart 
+
+ssh
+----
+port no : 22 
+daemon : sshd 
+conf file : /etc/ssh/sshd_config 
+
+http 
+----
+port no: 80
+daemon : httpd 
+conf file : /etc/httpd/conf/httpd.conf 
+
+service httpd restart  (service interruption)
+service httpd reload    ()

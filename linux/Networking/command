@@ -1,0 +1,11 @@
+apt-get install iputils-ping
+
+hostname    (give name for you server)
+su hostname linux-server   (change name for hostname)
+init 6      (restart system)
+ping google.com 
+wget        (download packages/softwares onto linux system)
+curl        (access the application from browser)
+netstat -tulpn      (which ports are used in your system)
+telnet      (whether particular port is working or not)
+telnet localhost 22 

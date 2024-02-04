@@ -1,0 +1,9 @@
+yum is the primary tool for getting, installing, deleting, querying and managing redhat enterprise linux 
+rpm software packages from official redhat software repositories, as well as other third-party repositories
+
+yum install package-name 
+yum remove package-name 
+yum update package-name
+yum info package-name 
+yum list available 
+yum list installed  

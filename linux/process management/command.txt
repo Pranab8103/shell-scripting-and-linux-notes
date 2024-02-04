@@ -1,0 +1,6 @@
+ps -rf  (list the processes which are running in system)
+kill/ kill -9   kill a process or service 
+fg      run the program in the foreground 
+bg      run the service in the back ground 
+top     list top 20 process which are consuming more CPU
+

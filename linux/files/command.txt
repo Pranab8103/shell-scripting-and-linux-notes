@@ -1,0 +1,43 @@
+gzip        (create a compressed file)
+gunzip      (unzip a file)
+tar         (extract tar file)
+
+gzip file1
+gunzip file1 
+tar -cvf dir1.tar dir1        (create verbose and file)
+tar -xvf dir1.tar       (extract dir1.tar)
+gzip dir1.tar   (normally we cannot gzip directory but if we take tar of that directory then it will
+                work with gzip)
+output -> dir1.tar.gz
+tar -xvzf dir1.tar.gz       (it will uzip and it is going to extract)
+
+Crontab
+-------
+in any operating system, it is possible to create jobs that you want it to reoccur. This process known as 
+job scheduling, is usually done based on user-defined jobs. For redhat or any other linux, this process is 
+handled by the cron service or a daemon called crond, which can be used to schedule tasks
+
+link files
+----------
+2 links - soft links and hard links
+
+soft link
+---------
+* If you need same file in different locations(by this way we can reduce space utilization)  
+* It can also be used to create a shortcuts to execute our scripts. if we want the script to get executed 
+    from anywhere, we can use softlink
+* Soft link - size of lik file is equal to no of characters in the name of original file 
+* if original file is deleted, link is broken and data is lost
+* command: ln -s <src_file> <dest_file>
+ln -s file1 file11
+
+hard link
+---------
+size of both file is same 
+if original file is deleted then also link will contain data 
+Command: ln <src_file> <dest_file>
+
+scp 
+---
+scp file1 root@10.20.40.30:/tmp
+scp root@10.20.40.30:/tmp /home/ec2-user/
